@@ -1,10 +1,21 @@
 import React from "react";
 
 export const Add = () => {
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      // Create an object to store the form data
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+
+      console.log(JSON.stringify(data));
+    };
+
   return (
     <div className="max-w-4xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md">
       <h2 className="text-2xl font-bold mb-6">Add new Employee</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700">
