@@ -52,8 +52,13 @@ const AdminSidebar = () => {
           <span>Department</span>
         </NavLink>
         <NavLink
-          to="/admin-dashboard"
-          className="flex items-center space-x-4 block py-2.5 px-4 rounded"
+          to="/admin-dashboard/employee/leaves"
+          className={({ isActive }) =>
+            `${
+              isActive ? "bg-teal-500 text-white" : ""
+            } flex items-center space-x-4 block py-2.5 px-4 rounded`
+          }
+          end
         >
           <FaFileWord />
           <span>Leave</span>

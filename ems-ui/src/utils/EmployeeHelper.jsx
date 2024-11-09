@@ -12,6 +12,14 @@ export const columns = [
         sortable : true
     },
     {
+        "name" : "Date Of Birth",
+        selector : (row) => row.dob
+    },
+    {
+        "name" : "Department",
+        selector : (row) => row.dep_name
+    },
+    {
         "name" : "Action",
         selector : (row) => row.action
     }
